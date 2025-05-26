@@ -6,7 +6,6 @@
                 password: document.getElementById('password').value
             };
             
-
             console.log("teste")
             
             try {
@@ -22,6 +21,7 @@
                 
                 if (response.ok) {
                     localStorage.setItem('token', JSON.stringify(data.token));
+                    localStorage.setItem('user', JSON.stringify(data.user));
                     
                     // Redirecionar para a página principal (após login bem-sucedido)
                     alert('Login realizado com sucesso!');

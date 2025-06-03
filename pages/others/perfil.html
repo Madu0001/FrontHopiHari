@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil do Usuário</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('mapa-hopi.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+
+        .container {
+            width: 400px;
+            margin: 50px auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            border-top: 6px solid #ff6b00;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: #c7c7c7;
+            border: none;
+            color: #ffffff;
+            padding: 5px 10px;
+            font-size: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #ff6b00;
+            color: white;
+            border: none;
+        }
+
+
+        h2 {
+            margin-top: 20px;
+            margin-bottom: 30px;
+            color: #333333;
+        }
+
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #ff6b00;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-item {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .info-label {
+            font-weight: bold;
+            color: #555555;
+        }
+
+        .info-value {
+            margin-top: 5px;
+            color: #222222;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button class="back-button" onclick="history.back()">Voltar</button>
+
+        <img class="profile-pic" src="imagem/perfil.jpeg" alt="Foto de Perfil">
+        <h2>Perfil do Usuário</h2>
+
+        <div class="info-item">
+            <div class="info-label">Primeiro Nome</div>
+            <div class="info-value">João</div>
+        </div>
+
+        <div class="info-item">
+            <div class="info-label">Último Nome</div>
+            <div class="info-value">Silva</div>
+        </div>
+
+        <div class="info-item">
+            <div class="info-label">Email</div>
+            <div class="info-value">joao.silva@email.com</div>
+        </div>
+
+        <div class="info-item">
+            <div class="info-label">Telefone</div>
+            <div class="info-value">(11) 91234-5678</div>
+        </div>
+    </div>
+</body>
+
+</html>
